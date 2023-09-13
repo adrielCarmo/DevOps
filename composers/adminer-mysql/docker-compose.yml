@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "rootpass"
+      MYSQL_DATABASE: "mydb"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    networks:
+      - myNetwork
+
+  adminer:
+    image: adminer
+    ports: 
+      - "8080:8080"
+    networks:
+      - myNetwork
+
+networks:
+  myNetwork:
+    driver: bridge
