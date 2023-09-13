@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  web:
+    image: httpd:latest
+    container_name: apache2
+    ports:
+      - "80:80"
+    volumes:
+      - ./website:/var/www/html
+    networks:
+      - minhaRede
+
+networks:
+  minhaRede:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.0/24
+          gateway: 192.168.0.1
