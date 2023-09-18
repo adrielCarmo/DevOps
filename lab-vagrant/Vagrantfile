@@ -16,7 +16,6 @@ Vagrant.configure("2") do |config|
         vb.name = "#{name}"
         vb.memory = conf["memory"]
         vb.cpus = conf["cpu"]
-        
       end
       machine.vm.provision "shell", path: "instalar-docker.sh"   
     end
