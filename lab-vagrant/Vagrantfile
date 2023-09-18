@@ -1,8 +1,8 @@
 machines = {
-  "node01" => {"memory" => "512", "cpu" => "1", "image" => "bento/ubuntu-22.04"},
-  "node02" => {"memory" => "512", "cpu" => "1", "image" => "bento/ubuntu-22.04"},
-  "node03" => {"memory" => "512", "cpu" => "1", "image" => "bento/ubuntu-22.04"},
-  "node04" => {"memory" => "512", "cpu" => "1", "image" => "bento/ubuntu-22.04"}
+  "node01" => {"memory" => "512", "cpu" => "1", "image" => "ubuntu/jammy64"},
+  "node02" => {"memory" => "512", "cpu" => "1", "image" => "ubuntu/jammy64"},
+  "node03" => {"memory" => "512", "cpu" => "1", "image" => "ubuntu/jammy64"},
+  "node04" => {"memory" => "512", "cpu" => "1", "image" => "ubuntu/jammy64"}
 }
 
 Vagrant.configure("2") do |config|
