@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  labels:
+    app: web-html
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: web-html
+  template:
+    metadata:
+      labels:
+        app: web-html
+    spec:
+      containers:
+        - name: web-html
+          image: adrielcarmo/app-web-teste:1.0
+          ports:
+            - containerPort: 80
