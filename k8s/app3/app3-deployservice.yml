@@ -7,10 +7,9 @@ spec:
     - name: app-phpv2
       image: adrielcarmo/app-php-teste:2.0
       ports:
-      - containerPort: 80
-      
----
+        - containerPort: 80
 
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -20,7 +19,6 @@ spec:
   selector:
     app: app-phpv2
   ports:
-  - port: 80
-    targetPort: 80
-    #nodePort: 32000
-
+    - port: 80
+      targetPort: 80
+      #nodePort: 32000
