@@ -9,6 +9,7 @@
 
 <body>
    <h1>Meu Aplicativo PHP</h1>
+   <p>Realizada alteracao dentro do container do Pod que roda essa aplicacao!</p>
    <?php
 
    echo gethostname();
@@ -19,5 +20,17 @@
 
    ?>
 </body>
+
+<script>
+   
+   let x = window.prompt("A aplicacao e boa?");
+
+   if(x == "SIM" || x == "sim" || x == "s") {
+      alert("BRABO!");
+   } else {
+      alert("FAZ MELHOR ENTAO SEU OTARIO!");
+   }
+
+</script>
 
 </html>
