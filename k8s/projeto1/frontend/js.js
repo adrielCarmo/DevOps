@@ -5,7 +5,7 @@ $("#button-blue").on("click", function() {
     var txt_mensagem = $("#mensagem").val();
 
     $.ajax({
-        url: "http://192.168.49.2:31859",
+        url: "http://192.168.58.2:31459",
         
         type: "post",
         data: {nome: txt_nome, mensagem: txt_mensagem, email: txt_email},
