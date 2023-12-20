@@ -22,7 +22,7 @@ echo "Expondo aplicação..."
 
 sleep 30s # aguardar os pods serem criados
 
-ipApp=$(minikube service --url lb-app-php)
+ipApp=$(minikube service -p multinode-cluster --url lb-app-php)
 
 echo "Deployment realizado com sucesso! Acesse a aplicação pelo IP:" $ipApp
 echo "FIM!"
